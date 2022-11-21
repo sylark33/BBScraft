@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 11/19/2022 15:05:20
+-- Date Created: 11/21/2022 15:34:14
 -- Generated from EDMX file: D:\MEOW\Progect\YiCraft-main\YiCraft\Models\YiCraftCore_info.edmx
 -- --------------------------------------------------
 

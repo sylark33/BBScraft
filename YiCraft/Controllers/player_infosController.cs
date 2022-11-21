@@ -49,25 +49,17 @@ namespace YiCraft.Controllers
         public ActionResult Create([Bind(Include = "id,uid,pwd")] player_infos player_infos)
         {
             YiCraftCoreEntities2 yc = new YiCraftCoreEntities2();
-            yicraft_infos y = yc.yicraft_infos.SingleOrDefault<yicraft_infos>(n => n.loginname == player_infos.uid);
-            player_infos p=yc.player_infos.SingleOrDefault<player_infos>(n => n.uid == player_infos.uid);
-            if (y == null)
-            {
-                return Content("<script>alert('注册失败！请确保你有白名单！');window.location.href='../Login/index';</script>");
-            }
-            else
-            {
-                if (ModelState.IsValid && p == null)
-                {
+
+
+
+
+
+
                     db.player_infos.Add(player_infos);
                     db.SaveChanges();
                     return Content("<script>alert('恭喜注册成功！请登入！');window.location.href='../Login/index';</script>");
-                }
-                else
-                {
-                    return Content("<script>alert('注册失败！请确保你有白名单！');window.location.href='../Login/index';</script>");
-                }
-            }
+ 
+
         }
 
         // GET: player_infos/Edit/5
