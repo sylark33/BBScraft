@@ -1,0 +1,12 @@
+C:\Users\FYZY\source\repos\YiCraft\Model\bin\Debug\Model.exe.config
+C:\Users\FYZY\source\repos\YiCraft\Model\bin\Debug\Model.exe
+C:\Users\FYZY\source\repos\YiCraft\Model\bin\Debug\Model.pdb
+C:\Users\FYZY\source\repos\YiCraft\Model\bin\Debug\EntityFramework.dll
+C:\Users\FYZY\source\repos\YiCraft\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\FYZY\source\repos\YiCraft\Model\bin\Debug\EntityFramework.xml
+C:\Users\FYZY\source\repos\YiCraft\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\FYZY\source\repos\YiCraft\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\FYZY\source\repos\YiCraft\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\FYZY\source\repos\YiCraft\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\FYZY\source\repos\YiCraft\Model\obj\Debug\Model.exe
+C:\Users\FYZY\source\repos\YiCraft\Model\obj\Debug\Model.pdb

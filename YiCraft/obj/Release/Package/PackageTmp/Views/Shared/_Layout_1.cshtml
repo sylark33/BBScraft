@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YiCraftCore意界核心</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+
+    <link href="~/css/Logincss/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/css/Logincss/templatemo-style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="tm-page-container mx-auto">
+        <header class="tm-header text-center">
+            <h1 class="tm-title text-uppercase">核心玩家信息查询系统</h1>
+            <p class="tm-primary-color"><i>来自意界核心</i></p>
+        </header>
+
+        <section class="tm-section">
+            <nav class="tm-nav">
+                <ul>
+                    <li class="active">
+                        <span class="tm-nav-deco"></span>金币</a>
+                    </li>
+                    <li>
+                        <span class="tm-nav-deco"></span>点券</a>
+                    </li>
+                    <li>
+                        <span class="tm-nav-deco"></span>声望</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="tm-content-container">
+                <figure class="mb-0">
+                    <img src="~/img/Loginimg/img-1.jpg" alt="Image" class="img-fluid tm-img" />
+                </figure>
+                <div class="tm-content">
+                    <h4 class="tm-page-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全服财富详情表单</h4>
+                            @RenderBody()
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span>Copyright &copy; 2020.Company name YiCraft.<a target="_blank" href=""></a></span>
+            <span></span>
+        </footer>
+    </div>
+</body>
+
+</html>

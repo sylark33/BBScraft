@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+
+@{
+
+    List<YiCraft.Models.whitelistquestion_infos> listquest = (List<YiCraft.Models.whitelistquestion_infos>)Session["listquest"];
+
+}
+@{
+
+    if (IsPost)
+    {
+
+        if ((string)Request["btn"] != listquest[(int)Session["pagenumber"]].answer)
+        {
+            //return Content("<script>alert('回答错误，请重新审核');window.location.href='../question/Index';</script>");
+            //Response.Redirect("~/question/index");
+            Response.Write("<script>alert('回答错误，请重新审核');window.location.href='../question/Index';</script>");
+        }
+        else
+        {
+            Session["pagenumber"] = (int)Session["pagenumber"] + 1;
+            if ((int)Session["pagenumber"] > 9)
+            {
+                Response.Write("<script>alert('恭喜完成审核第一步，接下来开始审核第二步，也是最后一步！');window.location.href='../mail/index';</script>");
+            }
+        }
+
+    }
+}
+<div class="container-fluid">
+    <div class="col-lg-10 col-lg-offset-1">
+
+        @{
+            if (Session["pagenumber"] != null)
+            {
+
+                <form method="post">
+                            <div class="jumbotron">
+                                @listquest[(int)Session["pagenumber"]].question
+                            </div>
+                    <br>
+                    <ul class="list-group" style="list-style-type:none">
+                        <li class="list-group-item-success">@listquest[(int)Session["pagenumber"]].A</li>
+                        <li>@listquest[(int)Session["pagenumber"]].B</li>
+                        <li class="list-group-item-success">@listquest[(int)Session["pagenumber"]].C</li>
+                        <li>@listquest[(int)Session["pagenumber"]].D</li>
+                        <li>@listquest[(int)Session["pagenumber"]].answer</li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <br>
+                    <br>
+
+                    <input class="btn btn-default" style="width:100px" type="submit" name="btn" value="A" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="btn btn-default" style="width:100px" type="submit" name="btn" value="B" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="btn btn-default" style="width:100px" type="submit" name="btn" value="C" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="btn btn-default" style="width:100px" type="submit" name="btn" value="D" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label id="demo"></label>
+                </form>
+
+
+            }
+        }
+    </div>
+</div>
+<script>
+    x = 20
+    function countSecond() {
+        x = x - 1
+        if (x <= 0) {
+            location.href = "index"
+        }
+        document.getElementById("demo").innerHTML = "倒计时：" + x;
+        setTimeout("countSecond()", 1000)
+    }
+    // 执行函数
+    countSecond()
+</script>

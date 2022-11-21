@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8fba0602425f42b984ca4f91600d468d" Name="Diagram1">
+        <EntityTypeShape EntityType="YiCraftCoreModel.discuss_infos" Width="1.5" PointX="6.875" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YiCraftCoreModel.player_infos" Width="1.5" PointX="4.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="YiCraftCoreModel.reply_infos" Width="1.5" PointX="8.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YiCraftCoreModel.whitelistquestion_infos" Width="1.5" PointX="1.125" PointY="3" />
+        <EntityTypeShape EntityType="YiCraftCoreModel.yicraft_infos" Width="1.5" PointX="3.375" PointY="3.25" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

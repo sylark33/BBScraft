@@ -1,0 +1,115 @@
+﻿@model YiCraft.Models.discuss_infos
+@using YiCraft.Models;
+@using System.Linq;
+
+
+@{
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+@{
+    if (Session["uid"].ToString() == "游客")
+    {
+        Response.Write("<script>alert('请先登入');window.location.href='../Login/Index';</script>");
+    }
+}
+
+
+@{
+    Session["did"] = Model.id;
+}
+<h2>YiCraftCore</h2>
+
+<div>
+    <h4>详情</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("文章编号")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+        <dt>
+            @Html.Label("文章状况")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.solve)
+        </dd>
+        <dt>
+            @Html.Label("文章主题")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.theme)
+        </dd>
+
+        <dt>
+            @Html.Label("文章内容")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AllContent)
+        </dd>
+
+        <dt>
+            @Html.Label("发布时间")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time)
+        </dd>
+
+        <dt>
+            @Html.Label("文章作者")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.author)
+        </dd>
+
+    </dl>
+</div>
+<table class="table">
+    <tr>
+        <td>
+            @Html.Label("回复")
+        </td>
+        <td>
+            @Html.Label("回复作者")
+        </td>
+        <td>
+            @Html.Label("回复时间")
+        </td>
+    </tr>
+    @{
+        int did = Convert.ToInt32(Session["did"]);
+        YiCraftCoreEntities2 yce = new YiCraftCoreEntities2();
+        var pm = from u in yce.reply_infos
+                 where u.theme_id == did
+                 select u;
+        foreach (var k in pm)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => k.reply)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => k.ReplyAuthor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => k.ReplyTime)
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+<p>
+    @Html.ActionLink("我想回复他", "Index", "reply_infos") |
+    @Html.ActionLink("返回", "Index")
+</p>
+
+
+

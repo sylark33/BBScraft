@@ -1,0 +1,41 @@
+﻿@model YiCraft.Models.yicraft_infos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>详情</h2>
+
+<div>
+    <h4>YiCraftCore</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("玩家名")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loginname)
+        </dd>
+
+        <dt>
+            @Html.Label("金币")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.balance)
+        </dd>
+
+        <dt>
+            @Html.Label("其他")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("返回总览", "Index")
+</p>

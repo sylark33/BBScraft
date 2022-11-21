@@ -1,0 +1,490 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YiCraft 意界</title>
+
+
+
+        <link href="~/css/animate.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-theme.css" rel="stylesheet" />
+        <link href="~/css/bootstrap-theme.min.css" rel="stylesheet" />
+        <link href="~/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/css/flexslider.css" rel="stylesheet" />
+        <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/css/queries.css" rel="stylesheet" />
+        <link href="~/css/styles.css" rel="stylesheet" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body id="top">
+    <audio autoplay="autoplay" hidden="hidden" loop="loop">
+        <source src="~/music/bg.mp3" type="audio/mpeg" />
+    </audio>
+    <header id="home">
+        <nav>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+                        <nav class="pull">
+                            <ul class="top-nav">
+                                <li><a href="#intro">总览<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                                <li><a href="#features">特色<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                                <li><a href="#responsive">历史<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                                <li><a href="#portfolio">模组<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                                <li><a href="#team">团队<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                                <li><a href="#contact">联系我们<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-right navicon">
+                        <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center inner">
+                        <h1 class="animated fadeInDown"><span>YiCraft 意界</span></h1>
+                        <p class="animated fadeInUp delay-05s">一个我的世界老牌服务器-开服时间长达：<em>7年</em></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <a class="learn-more-btn" @Html.ActionLink("核心成员登入", "Index", "Login")></a>
+                        <br>
+                        <a class="learn-more-btn" @Html.ActionLink("意界白名单审核注册", "Index", "question")></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="intro text-center section-padding" id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 wp1">
+                    <h1 class="arrow">意界--梦最开始的地方</h1>
+                    <p>加入我们 <a href="#">也许你别无选择</a>在这个破碎的时代，总要有一个英雄站出。这一次，意界，震撼来袭！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features text-center section-padding" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="arrow">爱上我们，你不需要任何理由</h1>
+                    <div class="features-wrapper">
+                        <div class="col-md-4 wp2">
+                            <div class="icon">
+                                <i class="fa fa-laptop shadow"></i>
+                            </div>
+                            <h2>不BAN物品</h2>
+                            <p>
+                                是的，你没有听错，所有物品全部开放，还原最真实的玩法！
+                            </p>
+                        </div>
+                        <div class="col-md-4 wp2 delay-05s">
+                            <div class="icon">
+                                <i class="fa fa-code shadow"></i>
+                            </div>
+                            <h2>腐竹灵魂</h2>
+                            <p>
+                                腐竹全天24小时在线，任何问题可私聊腐竹，10分钟之内必回！
+                            </p>
+                        </div>
+                        <div class="col-md-4 wp2 delay-1s">
+                            <div class="icon">
+                                <i class="fa fa-heart shadow"></i>
+                            </div>
+                            <h2>独立世界</h2>
+                            <p>
+                                你将拥有一个属于你的独立世界，在满足常驻服务器两周以上免费获得！
+                            </p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center" id="responsive">
+        <div class="container-fluid nopadding responsive-services">
+            <div class="wrapper">
+                <div class="iphone">
+                    <div class="wp3"></div>
+                </div>
+                <div class="fluid-white"></div>
+            </div>
+            <div class="container designs">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-7">
+                        <div id="servicesSlider">
+                            <ul class="slides">
+                                <li>
+                                    <h1 class="arrow">意界史录</h1>
+                                    <p>意界一周年 </p>
+                                    <p>
+                                        意界二周年
+                                    </p>
+                                    <p>意界三周年</p>
+                                </li>
+                                <li>
+                                    <h1 class="arrow">意界史录</h1>
+                                    <p>意界四周年 </p>
+                                    <p>
+                                        意界五周年
+                                    </p>
+                                    <p>意界六周年</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="swag text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1>接下来，开启模组之旅<span>绝不 <em>仅仅</em> 如此</span></h1>
+                    <a href="#portfolio" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio text-center section-padding" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div id="portfolioSlider">
+                    <ul class="slides">
+                        <li>
+                            <div class="col-md-4 wp4">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-01.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>工业时代</h2>
+                                <p>现代化最好用，最基础，最广泛的模组</p>
+                            </div>
+                            <div class="col-md-4 wp4 delay-05s">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-02.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>神秘时代</h2>
+                                <p>魔法类模组的鼻祖，祭坛，傀儡，超多玩法</p>
+                            </div>
+                            <div class="col-md-4 wp4 delay-1s">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-03.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>拔刀剑</h2>
+                                <p>比起研究，你更喜欢痛快的击杀？那你需要这个</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-md-4 wp4">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-01.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>应用能源</h2>
+                                <p>有了他，你的领地将不再存在箱子，你将踏入自动化的世界</p>
+                            </div>
+                            <div class="col-md-4 wp4 delay-05s">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-02.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>沉浸工艺</h2>
+                                <p>什么？加上这个，你现在敢说MC不在真实吗？</p>
+                            </div>
+                            <div class="col-md-4 wp4 delay-1s">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-03.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>龙之研究</h2>
+                                <p>是的，能量已经远远满足不了我了，我需要一个神龙反应堆</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-md-4 wp4">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-01.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>建筑管道</h2>
+                                <p>物品可以在管道传输，真正的自动化鼻祖，看着物品在管道里移动也是一种乐趣</p>
+                            </div>
+                            <div class="col-md-4 wp4 delay-05s">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-02.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>通用机械</h2>
+                                <p>你是否还在为EU电力无法转RF而烦恼？在这里，一切烦恼都不存在</p>
+                            </div>
+                            <div class="col-md-4 wp4 delay-1s">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-03.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>暮色世界</h2>
+                                <p>老牌冒险类模组，逐个击杀boss或者头颅，通关暮色世界，享受真正的乐趣</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-md-4 wp4">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-01.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>时装工坊</h2>
+                                <p>全服免费开放，随意使用，想穿什么衣服，就穿什么衣服</p>
+                            </div>
+                            <div class="col-md-4 wp4 delay-05s">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-02.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>大型核反应堆</h2>
+                                <p>能量，我需要更多，多到能毁灭世界！</p>
+                            </div>
+                            <div class="col-md-4 wp4 delay-1s">
+                                <div class="overlay-effect effects clearfix">
+                                    <div class="img">
+                                        <img src="~/img/portfolio-03.jpg" alt="Portfolio Item">
+                                        <div class="overlay">
+                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>返回目录</a>
+                                            <a class="close-overlay hidden">x</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>植物魔法</h2>
+                                <p>玩转植物，玩转魔法，在激扬的bgm下挑战盖亚！</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="ignite-cta text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="http://3205409x2z.zicp.vip/" class="ignite-btn">YiCraftCore意界核心实时卫星地图</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="team text-center section-padding" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="arrow">我们的团队</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="team-wrapper">
+                    <div id="teamSlider">
+                        <ul class="slides">
+                            <li>
+                                <div class="col-md-4 wp5">
+                                    <img src="" alt="Team Member">
+                                    <h2>腐竹大大--FYZY</h2>
+                                    <p>服务器的灵魂，拥有后台权限以及OP权限，各种问题都可以询问</p>
+                                    <div class="social">
+                                        <ul class="social-buttons">
+                                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 wp5 delay-05s">
+                                    <img src="" alt="Team Member">
+                                    <h2>警察大大--panda</h2>
+                                    <p>看到这个名字，你可以要小心了，牢狱之灾，也许就在下一刻</p>
+                                    <div class="social">
+                                        <ul class="social-buttons">
+                                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 wp5 delay-1s">
+                                    <img src="" alt="Team Member">
+                                    <h2>技术大大--WFZ</h2>
+                                    <p>这是一位功不可没站在服务器后端的大臣，服务器稳定的维护，网站的开发，数据库的操作与他脱不了干系</p>
+                                    <div class="social">
+                                        <ul class="social-buttons">
+                                            <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe text-center">
+        <div class="container">
+            <h1><i class="fa fa-paper-plane"></i><span>返回至最顶部</span></h1>
+            <form action="/YiCraft/File">
+                <input type="submit" name="" value="前往YiCraftCore意界核心文件系统"  />
+         
+
+            </form>
+        </div>
+    </section>
+    <section class="dark-bg text-center section-padding contact-wrap" id="contact">
+        <a href="#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="arrow">联系我们的方式</h1>
+                </div>
+            </div>
+            <div class="row contact-details">
+                <div class="col-md-4">
+                    <div class="light-box box-hover">
+                        <h2><i class="fa fa-map-marker"></i><span>腐竹QQ</span></h2>
+                        <p>454313500</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="light-box box-hover">
+                        <h2><i class="fa fa-mobile"></i><span>QQ群</span></h2>
+                        <p>请向腐竹申请</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="light-box box-hover">
+                        <h2><i class="fa fa-paper-plane"></i><span>邮箱</span></h2>
+                        <p><a href="#">454313500@qq.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="social-buttons">
+                        <li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="legals">
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Legals</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 credit">
+                    <p>Copyright &copy; 2020.Company name YIcraft.<a target="_blank" href=""></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/scripts.js"></script>
+    <script src="~/js/jquery.flexslider.js"></script>
+    <script src="~/js/modernizr.js"></script>
+    <div style="display:none">
+        <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+    </div>
+</body>
+</html>
