@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YiCraftCoreModelStoreContainer" CdmEntityContainer="YiCraftCoreEntities2">
+    <EntitySetMapping Name="discuss_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.discuss_infos">
+        <MappingFragment StoreEntitySet="discuss_infos">
+          <ScalarProperty Name="solve" ColumnName="solve" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="theme" ColumnName="theme" />
+          <ScalarProperty Name="AllContent" ColumnName="AllContent" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="author" ColumnName="author" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.player_infos">
+        <MappingFragment StoreEntitySet="player_infos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reply_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.reply_infos">
+        <MappingFragment StoreEntitySet="reply_infos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="theme_id" ColumnName="theme_id" />
+          <ScalarProperty Name="reply" ColumnName="reply" />
+          <ScalarProperty Name="ReplyAuthor" ColumnName="ReplyAuthor" />
+          <ScalarProperty Name="ReplyTime" ColumnName="ReplyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="whitelistquestion_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.whitelistquestion_infos">
+        <MappingFragment StoreEntitySet="whitelistquestion_infos">
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="D" ColumnName="D" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="B" ColumnName="B" />
+          <ScalarProperty Name="A" ColumnName="A" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="yicraft_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.yicraft_infos">
+        <MappingFragment StoreEntitySet="yicraft_infos">
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="idcard" ColumnName="idcard" />
+          <ScalarProperty Name="actualname" ColumnName="actualname" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="loginname" ColumnName="loginname" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

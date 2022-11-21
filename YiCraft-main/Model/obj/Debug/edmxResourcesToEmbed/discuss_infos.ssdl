@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YiCraftCoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“YiCraftCore.dbo.discuss_infos”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="discuss_infos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="theme" Type="nvarchar(max)" />
+    <Property Name="AllContent" Type="nvarchar(max)" />
+    <Property Name="time" Type="nvarchar" MaxLength="50" />
+    <Property Name="author" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“YiCraftCore.dbo.reply_infos”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="reply_infos">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="theme_id" />
+      <PropertyRef Name="reply" />
+      <PropertyRef Name="ReplyAuthor" />
+      <PropertyRef Name="ReplyTime" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="theme_id" Type="int" Nullable="false" />
+    <Property Name="reply" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ReplyAuthor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReplyTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="YiCraftCoreModelStoreContainer">
+    <EntitySet Name="discuss_infos" EntityType="Self.discuss_infos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [discuss_infos].[id] AS [id], 
+    [discuss_infos].[theme] AS [theme], 
+    [discuss_infos].[AllContent] AS [AllContent], 
+    [discuss_infos].[time] AS [time], 
+    [discuss_infos].[author] AS [author]
+    FROM [dbo].[discuss_infos] AS [discuss_infos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="reply_infos" EntityType="Self.reply_infos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [reply_infos].[id] AS [id], 
+    [reply_infos].[theme_id] AS [theme_id], 
+    [reply_infos].[reply] AS [reply], 
+    [reply_infos].[ReplyAuthor] AS [ReplyAuthor], 
+    [reply_infos].[ReplyTime] AS [ReplyTime]
+    FROM [dbo].[reply_infos] AS [reply_infos]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

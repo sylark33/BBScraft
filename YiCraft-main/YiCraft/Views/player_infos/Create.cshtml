@@ -1,0 +1,89 @@
+﻿@model YiCraft.Models.player_infos
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>YiCraftCore意界核心</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+
+    <link href="~/css/Logincss/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/css/Logincss/templatemo-style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="tm-page-container mx-auto">
+        <header class="tm-header text-center">
+            <h1 class="tm-title text-uppercase">核心玩家信息注册</h1>
+            <p class="tm-primary-color"><i>来自意界核心</i></p>
+        </header>
+
+        <section class="tm-section">
+            <div class="tm-content-container">
+                <figure class="mb-0">
+                    <img src="~/img/Loginimg/img-1.jpg" alt="Image" class="img-fluid tm-img" />
+                </figure>
+                <div class="tm-content">
+                    <h4 class="tm-page-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;意界核心成员</h4>
+                    <h2>注册</h2>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            <h4>玩家信息</h4>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.Label("ID",htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.uid, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.uid, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.Label("密码", htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.pwd, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.pwd, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="注册" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <div>
+                        @Html.ActionLink("返回登入", "Index","Login")
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span>Copyright &copy; 2020.Company name YiCraft.<a target="_blank" href=""></a></span>
+            <span></span>
+        </footer>
+    </div>
+</body>
+
+</html>

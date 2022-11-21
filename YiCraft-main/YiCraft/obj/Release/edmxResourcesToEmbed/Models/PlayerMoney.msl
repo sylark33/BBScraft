@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YiCraftCoreModelStoreContainer" CdmEntityContainer="YiCraftCoreEntities1">
+    <EntitySetMapping Name="player_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.player_infos">
+        <MappingFragment StoreEntitySet="player_infos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="yicraft_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.yicraft_infos">
+        <MappingFragment StoreEntitySet="yicraft_infos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="loginname" ColumnName="loginname" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

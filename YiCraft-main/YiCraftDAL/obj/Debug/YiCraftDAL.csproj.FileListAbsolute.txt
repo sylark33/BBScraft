@@ -1,0 +1,6 @@
+C:\Users\FYZY\source\repos\YiCraft\YiCraftDAL\bin\Debug\YiCraftDAL.exe.config
+C:\Users\FYZY\source\repos\YiCraft\YiCraftDAL\bin\Debug\YiCraftDAL.exe
+C:\Users\FYZY\source\repos\YiCraft\YiCraftDAL\bin\Debug\YiCraftDAL.pdb
+C:\Users\FYZY\source\repos\YiCraft\YiCraftDAL\obj\Debug\YiCraftDAL.csprojAssemblyReference.cache
+C:\Users\FYZY\source\repos\YiCraft\YiCraftDAL\obj\Debug\YiCraftDAL.exe
+C:\Users\FYZY\source\repos\YiCraft\YiCraftDAL\obj\Debug\YiCraftDAL.pdb

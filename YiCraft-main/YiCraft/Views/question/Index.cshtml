@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_2.cshtml";
+}
+@{
+    Session["uid"] = "游客";
+    Session["cheak1"] = "1";
+    Session["cheak2"] = "1";
+}
+<meta name="viewport" content="width=device-width" />
+<title></title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container-fluid">
+    <div class="col align-items-center">
+        <div class="jumbotron center-block text-center">
+            <h2>YiCraftCore白名单审核共2个部分</h2>
+            <h3>即将进行第一部分</h3>
+            <h3>请注意：接下来将有10道题目</h3>
+            <h3>你必须全部答对</h3>
+            <a href="~/question/questionlist">开始答题</a>
+        </div>
+    </div>
+</div>
+
+
+

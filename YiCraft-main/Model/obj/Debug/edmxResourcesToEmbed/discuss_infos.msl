@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YiCraftCoreModelStoreContainer" CdmEntityContainer="YiCraftCoreEntities">
+    <EntitySetMapping Name="discuss_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.discuss_infos">
+        <MappingFragment StoreEntitySet="discuss_infos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="theme" ColumnName="theme" />
+          <ScalarProperty Name="AllContent" ColumnName="AllContent" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="author" ColumnName="author" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reply_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.reply_infos">
+        <MappingFragment StoreEntitySet="reply_infos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="theme_id" ColumnName="theme_id" />
+          <ScalarProperty Name="reply" ColumnName="reply" />
+          <ScalarProperty Name="ReplyAuthor" ColumnName="ReplyAuthor" />
+          <ScalarProperty Name="ReplyTime" ColumnName="ReplyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YiCraftCoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="player_infos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uid" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="pwd" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="yicraft_infos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="loginname" Type="nvarchar(max)" />
+    <Property Name="balance" Type="nvarchar(max)" />
+    <Property Name="status" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="YiCraftCoreModelStoreContainer">
+    <EntitySet Name="player_infos" EntityType="Self.player_infos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="yicraft_infos" EntityType="Self.yicraft_infos" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
