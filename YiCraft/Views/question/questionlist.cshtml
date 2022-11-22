@@ -13,7 +13,7 @@
     if (IsPost)
     {
 
-        if ((string)Request["btn"] != listquest[(int)Session["pagenumber"]].answer)
+        if ((string)Request["btn"] == listquest[(int)Session["pagenumber"]].answer)
         {
             //return Content("<script>alert('回答错误，请重新审核');window.location.href='../question/Index';</script>");
             //Response.Redirect("~/question/index");
@@ -22,9 +22,9 @@
         else
         {
             Session["pagenumber"] = (int)Session["pagenumber"] + 1;
-            if ((int)Session["pagenumber"] > 9)
+            if ((int)Session["pagenumber"] > 2)
             {
-                Response.Write("<script>alert('恭喜完成审核第一步，接下来开始审核第二步，也是最后一步！');window.location.href='../mail/index';</script>");
+                Response.Write("<script>alert('恭喜完成审核第一步，接下来开始审核第二步，也是最后一步！');window.location.href='../player_infos/Create';</script>");
             }
         }
 
@@ -38,16 +38,16 @@
             {
 
                 <form method="post">
-                            <div class="jumbotron">
-                                @listquest[(int)Session["pagenumber"]].question
-                            </div>
+                    <div class="jumbotron">
+                        @listquest[(int)Session["pagenumber"]].question
+                    </div>
                     <br>
                     <ul class="list-group" style="list-style-type:none">
                         <li class="list-group-item-success">@listquest[(int)Session["pagenumber"]].A</li>
                         <li>@listquest[(int)Session["pagenumber"]].B</li>
                         <li class="list-group-item-success">@listquest[(int)Session["pagenumber"]].C</li>
                         <li>@listquest[(int)Session["pagenumber"]].D</li>
-                        <li>@listquest[(int)Session["pagenumber"]].answer</li>
+                        @*<li>@listquest[(int)Session["pagenumber"]].answer</li>*@
                         <li></li>
                         <li></li>
                     </ul>

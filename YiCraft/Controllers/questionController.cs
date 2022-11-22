@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -34,12 +34,16 @@ namespace MVCmodel.Controllers
         {
             if (Session["listquest"] == null)
             {
-               
-                //return Content("<script>alert('»Ø´ğ´íÎó£¬ÇëÖØĞÂÉóºË');window.location.href='../question/Index';</script>");
-               Index();
 
+                //return Content("<script>alert('Â»Ã˜Â´Ã°Â´Ã­ÃÃ³Â£Â¬Ã‡Ã«Ã–Ã˜ÃÃ‚Ã‰Ã³ÂºÃ‹');window.location.href='../question/Index';</script>");
+                Index();
             }
             return View();
+        }
+
+        public ActionResult qu_entrance()
+        {
+            return View("Index");
         }
 
     }
