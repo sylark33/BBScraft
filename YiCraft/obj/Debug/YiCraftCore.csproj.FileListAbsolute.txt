@@ -161,7 +161,6 @@ D:\MEOW\Progect\YiCraft-main\YiCraft\bin\System.Web.WebPages.Razor.xml
 D:\MEOW\Progect\YiCraft-main\YiCraft\bin\Newtonsoft.Json.xml
 D:\MEOW\Progect\YiCraft-main\YiCraft\bin\Antlr3.Runtime.pdb
 D:\MEOW\Progect\YiCraft-main\YiCraft\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\MEOW\Progect\YiCraft-main\YiCraft\bin\zh-Hans\EntityFramework.resources.dll
 D:\MEOW\Progect\YiCraft-main\YiCraft\bin\zh-Hans\System.Web.Helpers.resources.dll
 D:\MEOW\Progect\YiCraft-main\YiCraft\bin\zh-Hans\System.Web.Mvc.resources.dll
 D:\MEOW\Progect\YiCraft-main\YiCraft\bin\zh-Hans\System.Web.Optimization.resources.dll

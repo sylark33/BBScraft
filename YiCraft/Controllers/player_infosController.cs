@@ -13,7 +13,6 @@ namespace YiCraft.Controllers
     public class player_infosController : Controller
     {
         private YiCraftCoreEntities2 db = new YiCraftCoreEntities2();
-
         // GET: player_infos
         public ActionResult Index()
         {
@@ -48,18 +47,10 @@ namespace YiCraft.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,uid,pwd")] player_infos player_infos)
         {
-            YiCraftCoreEntities2 yc = new YiCraftCoreEntities2();
 
-
-
-
-
-
-                    db.player_infos.Add(player_infos);
-                    db.SaveChanges();
-                    return Content("<script>alert('恭喜注册成功！请登入！');window.location.href='../Login/index';</script>");
- 
-
+            db.player_infos.Add(player_infos);
+            db.SaveChanges();
+            return Content("<script>alert('恭喜注册成功！请登入！');window.location.href='../Login/index';</script>");
         }
 
         // GET: player_infos/Edit/5
@@ -118,7 +109,6 @@ namespace YiCraft.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)

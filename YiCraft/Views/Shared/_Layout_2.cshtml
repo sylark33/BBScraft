@@ -22,10 +22,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("主页", "Index", "YiCraft")</li>
-                    <li>@Html.ActionLink("关于", "Index", "YiCraft")</li>
-                    <li>@Html.ActionLink("联系方式", "Index", "YiCraft")</li>
-
+                    <li>@Html.ActionLink("论坛首页", "Index", "Login")</li>
+                    <li>@Html.ActionLink("关于", "Index", "Login")</li>
+                    <li>@Html.ActionLink("个人中心", "Index", "Login")</li>
+                    <li>@Html.ActionLink("首页", "Post", "discuss_infos")</li>
+                    <!-- <li><a href="../Login/Index"><input type="button" value="主页" /></a></li> -->
                 </ul>
             </div>
         </div>
@@ -35,7 +36,7 @@
 
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - 来自YiCraftCore意界核心</p>
+            <p>&copy; @DateTime.Now.Year - 来自天津工业大学软件学院</p>
         </footer>
     </div>
 
