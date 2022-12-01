@@ -127,5 +127,10 @@ namespace YiCraft.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Post()
+        {
+            return View();
+        }
     }
 }
