@@ -15,26 +15,32 @@
 <body>
     <div class="login">
         <div class="login_title">
-            <p><img src="~/img/Loginimg/jinghui.png" style="width:80px;height:80px;margin-right:30px;" />系统</p>
+            <p><img src="~/img/Loginimg/jinghui.png" style="width:80px;height:80px;margin-right:30px;" />大学生社交生活论坛欢迎你</p>
         </div>
+
         <div class="login_main">
-            <div class="main_left"></div>
+
+            <div class="main_left">
+
+            </div>
+
             <div class="main_right">
                 <div class="right_title">用户登录</div>
-                <form action="/Login/Login_end" method="post">
+                <form action="/Login/Login_end" method="post" class="form">
                     <div class="username">
                         <img src="~/img/Loginimg/username.png" alt="">
                         <input type="text" name="name" placeholder="请输入用户名">
                     </div>
+
                     <div class="password">
                         <img src="~/img/Loginimg/password.png" alt="">
                         <input type="password" name="pwd" placeholder="请输入密码">
                     </div>
 
-                    <div><input type="submit" value="登录" /></div>
-                    <a href="../question/qu_entrance"><input type="button" value="注册"></a>
-                    <!-- <a href="../discuss_infos/Post"><input type="button" value="Post"></a> -->
+                    <div class="btn"><input type="submit" value="登录" /></div>
 
+                    <div class="btn"><a href="../question/qu_entrance"><input type="button" value="注册"></a></div>
+                    <!-- <a href="../discuss_infos/Post"><input type="button" value="Post"></a> -->
 
                     <center><p style="margin-top:20px;font-size:12px;color:#FA6F03;">登录遇到问题，请联系我们</p></center>
                 </form>

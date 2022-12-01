@@ -234,7 +234,7 @@
     <Content Include="img\Loginimg\hero-bg.jpg" />
     <Content Include="img\Loginimg\img-1.jpg" />
     <Content Include="img\Loginimg\jinghui.png" />
-    <Content Include="img\Loginimg\login_left2.png" />
+    <Content Include="img\Loginimg\login_left.png" />
     <Content Include="img\Loginimg\password.png" />
     <Content Include="img\Loginimg\username.png" />
     <Content Include="img\plants-bg.jpg" />
@@ -618,7 +618,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\utf8-net\third-party\snapscreen\" />
-    <Folder Include="file\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

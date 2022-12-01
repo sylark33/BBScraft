@@ -34,7 +34,6 @@ namespace MVCmodel.Controllers
         {
             if (Session["listquest"] == null)
             {
-
                 //return Content("<script>alert('»Ø´ð´íÎó£¬ÇëÖØÐÂÉóºË');window.location.href='../question/Index';</script>");
                 Index();
             }
