@@ -9,6 +9,9 @@ namespace YiCraft.Controllers
 {
     public class LoginController : Controller
     {
+        //数据库上下文链接对象
+        YiCraftCoreEntities2 yc = new YiCraftCoreEntities2();
+
         // GET: Login
         public ActionResult Index()
         {
@@ -18,8 +21,12 @@ namespace YiCraft.Controllers
         [HttpPost]
         public ActionResult Login_end(string name, string pwd)
         {
-            YiCraftCoreEntities2 yc = new YiCraftCoreEntities2();
             player_infos p = yc.player_infos.SingleOrDefault<player_infos>(n => n.uid == name);
+            if (p == null)
+            {
+                return Content("<script>alert('账号不能为空！');window.location.href='../Login/index';</script>");
+            }
+
             if (p.pwd == pwd)
             {
                 Session["uid"] = name;

@@ -127,7 +127,6 @@ h1, h2, h3, h4, h5, h6 {
             -moz-border-bottom-right-radius: 10px;
             -webkit-border-bottom-right-radius: 10px;
             border-bottom-right-radius: 10px;
-
         }
 
             .login > .login_main > .main_right > .right_title {
@@ -136,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
                 font-weight: 700;
                 text-align: center;
                 line-height: 60px;
-                background: url("../img/border_img.png") repeat;
+                background: url("../../img/Loginimg/border_img.png") repeat;
                 margin-bottom: 25px;
             }
 
@@ -150,92 +149,91 @@ h1, h2, h3, h4, h5, h6 {
                     top: 7px;
                 }
 
-.username input {
-    height: 35px;
-    width: 250px;
-    border: 1px solid #d3d8dc;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    color: #333;
-    padding-left: 40px;
-}
+            .login > .login_main > .main_right > form > .form1 input {
+                height: 35px;
+                width: 250px;
+                border: 1px solid #d3d8dc;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+                margin-left: 50px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                color: #333;
+                padding-left: 40px;
+            }
 
-.password input {
-    height: 35px;
-    width: 250px;
-    border: 1px solid #d3d8dc;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    color: #333;
-    padding-left: 40px;
-}
+            .login > .login_main > .main_right > form > .btn1 input{
+                height: 35px;
+                width: 250px;
+                border: 1px solid #d3d8dc;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+                margin-left: 50px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                color: #333;
+            }
 
-.btn {
-    height: 35px;
-    width: 250px;
-    border: 1px solid #d3d8dc;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    color: #333;
-}
+            .login > .login_main > .main_right > form > .btn2 input {
+                height: 35px;
+                width: 250px;
+                border: 1px solid #d3d8dc;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+                margin-left: 50px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                color: #333;
+            }
 
-.login > .login_main > .main_right > form > .code > input {
-    width: 150px;
-}
+            .login > .login_main > .main_right > form > .code > input {
+                width: 150px;
+            }
 
-.login > .login_main > .main_right > form > .code > .code_img {
-    width: 90px;
-    height: 35px;
-    float: right;
-    margin-right: 50px;
-    cursor: pointer;
-}
+            .login > .login_main > .main_right > form > .code > .code_img {
+                width: 90px;
+                height: 35px;
+                float: right;
+                margin-right: 50px;
+                cursor: pointer;
+            }
 
-.login > .login_main > .main_right > form input:focus {
-    border: 1px solid #999;
-}
+            .login > .login_main > .main_right > form input:focus {
+                border: 1px solid #999;
+            }
 
-.login > .login_main > .main_right > form > .yes_login > a {
-    display: block;
-    width: 250px;
-    height: 35px;
-    line-height: 35px;
-    text-align: left;
-    background-color: #3C3C3C;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    color: #fff;
-    text-decoration: none;
-    margin-left: 50px;
-}
+            .login > .login_main > .main_right > form > .yes_login > a {
+                display: block;
+                width: 250px;
+                height: 35px;
+                line-height: 35px;
+                text-align: left;
+                background-color: #3C3C3C;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                color: #fff;
+                text-decoration: none;
+                margin-left: 50px;
+            }
 
-    .login > .login_main > .main_right > form > .yes_login > a:hover {
-        background-color: #0058af;
+                .login > .login_main > .main_right > form > .yes_login > a:hover {
+                    background-color: #0058af;
+                }
+
+    .login > .login_footer {
+        text-align: center;
+        padding-top: 20px;
     }
 
-.login > .login_footer {
-    text-align: center;
-    padding-top: 20px;
-}
-
-    .login > .login_footer > p {
-        font-size: 14px;
-        color: #eee;
-        line-height: 30px;
-    }
+        .login > .login_footer > p {
+            font-size: 14px;
+            color: #eee;
+            line-height: 30px;
+        }
 
 .button_set {
     background-color: #4CAF50;

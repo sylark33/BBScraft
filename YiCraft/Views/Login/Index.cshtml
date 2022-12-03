@@ -20,27 +20,26 @@
 
         <div class="login_main">
 
-            <div class="main_left">
-
-            </div>
+            <div class="main_left"></div>
 
             <div class="main_right">
                 <div class="right_title">用户登录</div>
+                <h3>@ViewBag.Error</h3>
                 <form action="/Login/Login_end" method="post" class="form">
-                    <div class="username">
+
+                    <div class="form1">
                         <img src="~/img/Loginimg/username.png" alt="">
                         <input type="text" name="name" placeholder="请输入用户名">
                     </div>
 
-                    <div class="password">
+                    <div class="form1">
                         <img src="~/img/Loginimg/password.png" alt="">
                         <input type="password" name="pwd" placeholder="请输入密码">
                     </div>
 
-                    <div class="btn"><input type="submit" value="登录" /></div>
+                    <div class="btn1"><input type="submit" value="登录" /></div>
 
-                    <div class="btn"><a href="../question/qu_entrance"><input type="button" value="注册"></a></div>
-                    <!-- <a href="../discuss_infos/Post"><input type="button" value="Post"></a> -->
+                    <a class="btn2" href="../question/qu_entrance"><input type="button" value="注册" /></a>
 
                     <center><p style="margin-top:20px;font-size:12px;color:#FA6F03;">登录遇到问题，请联系我们</p></center>
                 </form>
