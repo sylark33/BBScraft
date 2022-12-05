@@ -35,6 +35,7 @@
     <EntitySet Name="reply_infos" EntityType="Self.reply_infos" />
     <EntitySet Name="whitelistquestion_infos" EntityType="YiCraftCoreModel.whitelistquestion_infos" />
     <EntitySet Name="yicraft_infos" EntityType="YiCraftCoreModel.yicraft_infos" />
+    <EntitySet Name="complaint_infos" EntityType="YiCraftCoreModel.complaint_infos" />
   </EntityContainer>
   <EntityType Name="whitelistquestion_infos">
     <Key>
@@ -58,5 +59,15 @@
     <Property Name="actualname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="idcard" Type="Int32" />
     <Property Name="age" Type="Int32" />
+  </EntityType>
+  <EntityType Name="complaint_infos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="complaint" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="author" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -142,6 +142,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\complaint_infos.cs">
+      <DependentUpon>YiCraftCore_info.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\discuss_infos.cs">
       <DependentUpon>YiCraftCore_info.tt</DependentUpon>
     </Compile>
@@ -272,7 +275,6 @@
       <DependentUpon>YiCraftCore_info.edmx</DependentUpon>
       <LastGenOutput>YiCraftCore_info.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\YiCraftCore_info.edmx.sql" />
     <Content Include="Models\YiCraftCore_info.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>YiCraftCore_info.edmx</DependentUpon>
@@ -614,6 +616,7 @@
     <Content Include="Content\utf8-net\third-party\video-js\font\vjs.eot" />
     <Content Include="Content\utf8-net\third-party\video-js\font\vjs.ttf" />
     <Content Include="Content\utf8-net\third-party\video-js\font\vjs.woff" />
+    <Content Include="Views\discuss_infos\complaint.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

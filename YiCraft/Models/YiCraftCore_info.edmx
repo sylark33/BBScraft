@@ -4,67 +4,78 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="YiCraftCoreModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="YiCraftCoreModelStoreContainer">
-    <EntitySet Name="discuss_infos" EntityType="YiCraftCoreModel.Store.discuss_infos" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="player_infos" EntityType="YiCraftCoreModel.Store.player_infos" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="reply_infos" EntityType="YiCraftCoreModel.Store.reply_infos" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="whitelistquestion_infos" EntityType="YiCraftCoreModel.Store.whitelistquestion_infos" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="yicraft_infos" EntityType="YiCraftCoreModel.Store.yicraft_infos" store:Type="Tables" Schema="dbo" />
-  </EntityContainer>
-  <EntityType Name="discuss_infos">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="theme" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="AllContent" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="time" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="author" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="solve" Type="nvarchar" Nullable="true" MaxLength="5" />
-  </EntityType>
-  <EntityType Name="player_infos">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="uid" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="pwd" Type="nvarchar" Nullable="false" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="reply_infos">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="theme_id" Type="int" Nullable="false" />
-    <Property Name="reply" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ReplyAuthor" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="ReplyTime" Type="nvarchar" Nullable="false" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="whitelistquestion_infos">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="question" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="A" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="B" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="C" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="D" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="answer" Type="nvarchar" Nullable="false" MaxLength="5" />
-  </EntityType>
-  <EntityType Name="yicraft_infos">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="loginname" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="mail" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="actualname" Type="nvarchar" Nullable="true" MaxLength="10" />
-    <Property Name="idcard" Type="int" Nullable="true" />
-    <Property Name="age" Type="int" Nullable="true" />
-  </EntityType>
-</Schema></edmx:StorageModels>
+    <Schema Namespace="YiCraftCoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="complaint_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="complaint" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="time" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="author" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="discuss_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="theme" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="AllContent" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="time" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="author" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="solve" Type="nvarchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="player_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uid" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="pwd" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="reply_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="theme_id" Type="int" Nullable="false" />
+          <Property Name="reply" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ReplyAuthor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ReplyTime" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="whitelistquestion_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="question" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="A" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="B" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="C" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="D" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="answer" Type="nvarchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="yicraft_infos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="loginname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="actualname" Type="nvarchar" MaxLength="10" />
+          <Property Name="idcard" Type="int" />
+          <Property Name="age" Type="int" />
+        </EntityType>
+        <EntityContainer Name="YiCraftCoreModelStoreContainer">
+          <EntitySet Name="complaint_infos" EntityType="Self.complaint_infos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="discuss_infos" EntityType="Self.discuss_infos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="player_infos" EntityType="Self.player_infos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="reply_infos" EntityType="Self.reply_infos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="whitelistquestion_infos" EntityType="Self.whitelistquestion_infos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="yicraft_infos" EntityType="Self.yicraft_infos" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="YiCraftCoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -103,6 +114,7 @@
           <EntitySet Name="reply_infos" EntityType="Self.reply_infos" />
           <EntitySet Name="whitelistquestion_infos" EntityType="YiCraftCoreModel.whitelistquestion_infos" />
           <EntitySet Name="yicraft_infos" EntityType="YiCraftCoreModel.yicraft_infos" />
+          <EntitySet Name="complaint_infos" EntityType="YiCraftCoreModel.complaint_infos" />
         </EntityContainer>
         <EntityType Name="whitelistquestion_infos">
           <Key>
@@ -126,6 +138,16 @@
           <Property Name="actualname" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="idcard" Type="Int32" />
           <Property Name="age" Type="Int32" />
+        </EntityType>
+        <EntityType Name="complaint_infos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="complaint" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="author" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -190,6 +212,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+          <EntitySetMapping Name="complaint_infos">
+            <EntityTypeMapping TypeName="YiCraftCoreModel.complaint_infos">
+              <MappingFragment StoreEntitySet="complaint_infos">
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="complaint" ColumnName="complaint" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

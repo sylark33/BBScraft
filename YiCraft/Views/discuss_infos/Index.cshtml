@@ -12,7 +12,7 @@
         Response.Write("<script>alert('请先登入');window.location.href='../Login/Index';</script>");
     }
 }
-<h2>YiCraftCore意界论坛信息列表</h2>
+<h2>大学生社交生活论坛欢迎你</h2>
 
 <p>
     @Html.ActionLink("发表一个属于自己的话题", "Create")
@@ -39,34 +39,38 @@
 
     @foreach (var item in Model)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.solve)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.theme)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.time)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.author)
-    </td>
-    <td>
-        @{ 
-            YiCraftCoreEntities2 yce = new YiCraftCoreEntities2();
-            var pm = from u in yce.reply_infos
-                     where u.theme_id == item.id
-                     select u;
-            int num = pm.Count();
-        }
-        @num.ToString()
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.solve)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.theme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.author)
+            </td>
+            <td>
+                @{
+                    YiCraftCoreEntities2 yce = new YiCraftCoreEntities2();
+                    var pm = from u in yce.reply_infos
+                             where u.theme_id == item.id
+                             select u;
+                    int num = pm.Count();
+                }
+                @num.ToString()
 
-    </td>
-    <td>
-        @Html.ActionLink("详情", "Details", new { id = item.id })
-    </td>
-</tr>
+            </td>
+            <td>
+                @Html.ActionLink("详情", "Details", new { id = item.id })
+            </td>
+        </tr>
     }
 
 </table>
+
+<div>
+    @Html.ActionLink("点击此处投诉","com", "discuss_infos")
+</div>

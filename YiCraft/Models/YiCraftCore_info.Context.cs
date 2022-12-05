@@ -42,6 +42,8 @@ public partial class YiCraftCoreEntities2 : DbContext
 
     public virtual DbSet<yicraft_infos> yicraft_infos { get; set; }
 
+    public virtual DbSet<complaint_infos> complaint_infos { get; set; }
+
 }
 
 }

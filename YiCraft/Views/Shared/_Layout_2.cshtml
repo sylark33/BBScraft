@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - 大学生社交生活论坛</title>
@@ -22,10 +22,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("论坛首页", "Index", "Login")</li>
+                    <li>@Html.ActionLink("入口", "Index", "Login")</li>
                     <li>@Html.ActionLink("关于", "Index", "Login")</li>
                     <li>@Html.ActionLink("个人中心", "Index", "Login")</li>
                     <li>@Html.ActionLink("首页", "Post", "discuss_infos")</li>
+                    <li>@Html.ActionLink("投诉2", "com", "discuss_infos")</li>
                     <!-- <li><a href="../Login/Index"><input type="button" value="主页" /></a></li> -->
                 </ul>
             </div>
@@ -44,4 +45,5 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
+
 </html>

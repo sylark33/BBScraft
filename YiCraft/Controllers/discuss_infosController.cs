@@ -62,6 +62,21 @@ namespace YiCraft.Controllers
             return View(discuss_infos);
         }
 
+        public ActionResult Complaint([Bind(Include = "id,title,complaint,time,author")] complaint_infos complaint_infos)
+        {
+
+            if (ModelState.IsValid && complaint_infos != null && complaint_infos.title != null)
+            {
+                complaint_infos.author = Session["uid"].ToString();
+                complaint_infos.time = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+                db.complaint_infos.Add(complaint_infos);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(complaint_infos);
+        }
+
         // GET: discuss_infos/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -131,6 +146,11 @@ namespace YiCraft.Controllers
         public ActionResult Post()
         {
             return View();
+        }
+
+        public ActionResult com()
+        {
+            return View("complaint");
         }
     }
 }

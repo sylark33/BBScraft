@@ -58,5 +58,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="complaint_infos">
+      <EntityTypeMapping TypeName="YiCraftCoreModel.complaint_infos">
+        <MappingFragment StoreEntitySet="complaint_infos">
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="complaint" ColumnName="complaint" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
